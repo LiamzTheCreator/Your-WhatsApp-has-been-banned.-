@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WhatsApp Blocked</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0b141a;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+text-align:center;
+}
+
+.box{
+background:#111b21;
+padding:30px;
+border-radius:12px;
+width:90%;
+max-width:400px;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+.icon{
+font-size:60px;
+margin-bottom:15px;
+}
+
+h1{
+font-size:22px;
+margin-bottom:10px;
+}
+
+p{
+color:#cfcfcf;
+font-size:14px;
+}
+
+button{
+margin-top:20px;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+background:#25D366;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="icon">⚠️</div>
+
+<h1>WhatsApp Diblokir</h1>
+
+<p>
+Akun WhatsApp kamu terdeteksi melakukan aktivitas tidak biasa.
+Akses sementara dibatasi selama <b id="timer">30</b> detik.
+</p>
+
+<button onclick="retry()">Coba Lagi</button>
+
+</div>
+
+<script>
+
+let time = 30;
+let timer = document.getElementById("timer");
+
+setInterval(()=>{
+if(time>0){
+time--;
+timer.innerText=time;
+}
+},1000);
+
+function retry(){
+alert("Server masih memverifikasi akun kamu...");
+}
+
+</script>
+
+</body>
+</html>
